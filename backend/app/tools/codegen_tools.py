@@ -1,0 +1,2 @@
+def generate_pipeline_code(metadata, dq_rules, model_recommendations):
+    return f'''# Auto-generated pipeline template\n# bronze->silver\n# Columns: {metadata.get("columns", [])}\n\nfrom pyspark.sql import functions as F\n\ndef build_bronze(df):\n    return df\n\ndef build_silver(df):\n    return df.dropDuplicates()\n\n# dq rules\nDQ_RULES = {dq_rules}\n# model recommendations\nMODEL = {model_recommendations}\n'''
