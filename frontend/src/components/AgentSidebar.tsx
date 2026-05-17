@@ -1,0 +1,2 @@
+import React from 'react';import { AgentInfo } from '../types';
+export default function AgentSidebar({agents,onSelect}:{agents:AgentInfo[];onSelect:(id:string)=>void}){return <div className='p-3 space-y-2'>{agents.map(a=><button key={a.id} onClick={()=>onSelect(a.id)} className='w-full text-left p-2 rounded bg-slate-900 border border-slate-700'><div className='text-sm'>{a.name}</div><div className='text-xs text-slate-400'>{a.description}</div></button>)}</div>}
