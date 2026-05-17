@@ -1,0 +1,2 @@
+import React from 'react';
+export default function AgentCanvas({selected,status}:{selected:string[];status:Record<string,string>}){return <div className='p-4 grid grid-cols-3 gap-3'>{selected.map(id=><div key={id} className='p-3 rounded border border-slate-700 bg-slate-900'><div className='font-medium'>{id}</div><div className='text-xs text-slate-400'>status: {status[id]||'idle'}</div></div>)}</div>}
